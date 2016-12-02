@@ -1,0 +1,89 @@
+@import '../node_modules/bootstrap/scss/bootstrap-reboot';
+
+body {
+    background-image: url("../bg/lehto1.jpeg");
+    animation: bg-flip 1s infinite,
+               bg-scroll 2s infinite;
+    animation-timing-function: step-end, linear;
+}
+
+.video-container {
+    margin: auto;
+    width: 600px;
+    height: 400px;
+}
+
+.content {
+    margin: auto;
+    max-width: 40em;
+    position: relative;
+    top: -50px;
+    background-color: limegreen;
+    min-height: 500px;
+    text-align: center;
+    animation: rainbow 0.33s infinite;
+    animation-timing-function: step-end;
+    animation-direction: alternate;
+}
+
+.countdown {
+    width: 100%;
+    font-size: 100px;
+}
+
+span {
+    display: inline-block;
+    font-size: 30px;
+}
+
+span.left {
+    float: left;
+}
+
+span.right {
+    float: right;
+}
+
+
+@keyframes bg-flip {
+    0% {
+        background-image: url("../bg/lehto1.jpeg");
+    }
+    33% {
+        background-image: url("../bg/lehto2.jpeg");
+    }
+    66% {
+        background-image: url("../bg/lehto3.jpeg");
+    }
+
+}
+
+@keyframes bg-scroll {
+    0% {
+        background-position-x: 0%;
+        background-position-y: 0%;
+    }
+    100% {
+        background-position-x: 100%;
+        background-position-y: -100%;
+    }
+}
+
+@keyframes rainbow {
+    0% {
+        background-color: hsl(0, 100%, 50%);
+        color: hsl(180, 100%, 50%);
+    }
+    33% {
+        background-color: hsl(90, 100%, 50%);
+        color: hsl(270, 100%, 50%);
+    }
+    66% {
+        background-color: hsl(180, 100%, 50%);
+        color: hsl(360, 100%, 50%);
+    }
+    100% {
+        background-color: hsl(360, 100%, 50%);
+        color: hsl(90, 100%, 50%);
+    }
+}
