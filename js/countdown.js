@@ -7,7 +7,7 @@ const Countdown = {
     },
 
     update: function () {
-        let goalDate = moment("2016-12-10 12:00");
+        let goalDate = moment("2016-12-10 15:00");
         let deltaTime = goalDate.diff(moment())
         let duration = moment.duration(deltaTime)
         target.innerHTML = Math.floor(duration.asHours()) + ' h <br>' + duration.minutes() + ' m <br>' + duration.seconds() + ' s';
