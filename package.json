@@ -4,7 +4,11 @@
   "description": "A bad idea",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel js -d lib",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "python -m http.server",
+    "prepublish": "node-sass sass/style.scss css/style.css",
+    "watch":  "node-sass -w sass/style.scss css/style.css"
   },
   "keywords": [
     "bad"
@@ -16,6 +20,9 @@
     "moment": "^2.17.0"
   },
   "devDependencies": {
-    "node-sass": "^3.13.0"
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "node-sass": "^3.13.0",
+    "webpack": "^3.6.0"
   }
 }

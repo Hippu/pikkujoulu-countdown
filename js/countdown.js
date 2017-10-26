@@ -1,4 +1,3 @@
-
 const Countdown = {
     init: function () {
         target = document.querySelector("#countdown");
@@ -7,10 +6,10 @@ const Countdown = {
     },
 
     update: function () {
-        let goalDate = moment("2017-12-10 15:00");
+        let goalDate = moment("2017-12-02 15:00");
         let deltaTime = goalDate.diff(moment())
         let duration = moment.duration(deltaTime)
-        target.innerHTML = Math.floor(duration.asHours()) + ' h <br>' + duration.minutes() + ' m <br>' + duration.seconds() + ' s';
+        target.innerHTML = '<h1>' + Math.floor(duration.asHours()) + ' h <br>' + duration.minutes() + ' m <br>' + duration.seconds() + ' s' + '</h1>';
         window.requestAnimationFrame(Countdown.update);
     }
 }

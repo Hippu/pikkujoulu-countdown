@@ -362,30 +362,49 @@ output {
   display: none !important; }
 
 body {
-  background-image: url("../bg/lehto1.jpeg");
+  background-color: black; }
+
+body.scrolling {
   animation: bg-flip 1s infinite, bg-scroll 2s infinite;
   animation-timing-function: step-end, linear; }
 
 .video-container {
-  margin: auto;
-  width: 600px;
-  height: 400px; }
+  margin: auto; }
+
+.current-card {
+  display: block !important; }
+
+.card {
+  display: none;
+  font-size: 24pt; }
 
 .content {
   margin: auto;
-  max-width: 40em;
   position: relative;
-  top: -50px;
-  background-color: limegreen;
-  min-height: 500px;
+  background-color: black;
   text-align: center;
-  animation: rainbow 0.33s infinite;
-  animation-timing-function: step-end;
-  animation-direction: alternate; }
+  width: 320px;
+  height: 320px; }
+  .content.animated {
+    animation: rainbow 0.33s infinite;
+    animation-timing-function: step-end;
+    animation-direction: alternate; }
 
-.countdown {
-  width: 100%;
-  font-size: 100px; }
+.skeletor {
+  background-size: 100% 100%;
+  height: 100%;
+  overflow: hidden;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("http://gifs.hippuu.fi/g/112197.gif"); }
+
+@media (min-height: 720px) {
+  .content {
+    height: 720px;
+    width: 1280px; }
+  h1 {
+    font-size: 100pt; } }
 
 span {
   display: inline-block;

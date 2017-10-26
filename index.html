@@ -6,18 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-    <div class="video-container">
-      <div id="christmas-robot"></div>
-    </div>
     <div class="content">
-      <span class="left">MMBLPKKJL</span>
-      <span class="right">COUNTDOWN</span>
-      <div class="countdown" id="countdown">ASD</div>
-      <span class="left">COUNTDOWN</span>
-      <span class="right">MMBLPKKJL</span>
+      <div class="card current-card" id="loading-card">
+        <h1>LOADING...</h1>
+      </div>
+      <div class="video-container card">
+          <div id="christmas-robot"></div>
+      </div>
+      <div class="card"><h1>02.12.2017 15:00</h1></div>
+      <div class="card countdown" id="countdown">ASD</div>
+      <div class="card skeletor"></div>
     </div>
     <script src="js/christmas_robot.js"></script>
-    <script src="node_modules/moment/min/moment.min.js"></script>
+    <script src="https://momentjs.com/downloads/moment.min.js"></script>
     <script src="js/countdown.js"></script>
   </body>
 </html>
